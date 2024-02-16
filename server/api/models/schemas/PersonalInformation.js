@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const PersonalInformationSchema = new mongoose.Schema({
+const PersonalInformationSchema = new Schema({
     date: String,
     lastName: String,
     firstName: String,
@@ -24,5 +25,5 @@ const PersonalInformationSchema = new mongoose.Schema({
     primaryLanguageSpoken: String,
     referredBy: String
   });  
-  const PersonalInformation = mongoose.model('PersonalInformation', PersonalInformationSchema);
-module.exports = PersonalInformation;
+
+module.exports = mongoose.model('PersonalInformation', PersonalInformationSchema);
