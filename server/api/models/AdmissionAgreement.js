@@ -7,7 +7,7 @@ const MedicalInformationSchema = require('./schemas/MedicalInformation');
 const AgreementAcknowledgementSchema = require('./schemas/AgreementAcknowledgement');
 
 const AdmissionAgreementSchema = new mongoose.Schema({
-  personalInformation: PersonalInformationSchema,
+  personalInformation: { type: mongoose.Schema.Types.ObjectId, ref: 'PersonalInformation' },
   education: EducationSchema,
   employment: EmploymentSchema,
   history: HistorySchema,
